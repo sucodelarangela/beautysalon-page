@@ -1,5 +1,7 @@
 Page developed during the event NLW Together from Rocketseat. Amongst several different learning trails, this content was part of the Origin trail which is focused on teaching the basics of Front-End Development with HTML, CSS and JavaScript.
 
+https://github.com/sucodelarangela/beautysalon-page/blob/master/preview.png?raw=true
+
 Below there are some tips on some tools used during the classes:
 
 ## General sites and stuff
