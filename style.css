@@ -1,4 +1,4 @@
-/* ===============RESET=============== */
+/* =============== RESET =============== */
 * {
   margin: 0;
   padding: 0;
@@ -22,7 +22,7 @@ p {
   line-height: 1.625rem;
 }
 
-/* ===============VARIABLES=============== */
+/* =============== VARIABLES =============== */
 :root {
   --header-height: 4.5rem;
 
@@ -38,7 +38,7 @@ p {
   --body-color: hsl(0 0% 98%);
 }
 
-/* ===============BASE=============== */
+/* =============== BASE =============== */
 html {
   scroll-behavior: smooth; /* rolagem suave */
 }
@@ -90,7 +90,7 @@ body {
   );
 }
 
-/* ===============LAYOUT=============== */
+/* =============== LAYOUT =============== */
 .container {
   margin-left: 1.5rem;
   margin-right: 1.5rem;
@@ -139,7 +139,7 @@ main {
   margin-top: calc(var(--header-height) + 2rem);
 }
 
-/* ===============LOGO=============== */
+/* =============== LOGO =============== */
 .logo {
   font: 700 1.31rem 'Poppins', sans-serif;
   color: var(--title-color);
@@ -149,7 +149,7 @@ main {
   color: var(--base-color);
 }
 
-/* ===============NAVIGATION=============== */
+/* =============== NAVIGATION =============== */
 nav {
   height: var(--header-height);
   display: flex;
@@ -253,7 +253,7 @@ nav.show div.icon-close {
   top: 1.5rem;
 }
 
-/* ===============HOME=============== */
+/* =============== HOME =============== */
 #home {
   overflow: hidden;
 }
@@ -302,7 +302,7 @@ nav.show div.icon-close {
   line-height: 1.31rem;
 }
 
-/* ===============ABOUT=============== */
+/* =============== ABOUT =============== */
 #about {
   background: white;
 }
@@ -348,7 +348,7 @@ nav.show div.icon-close {
   margin-bottom: 2rem;
 }
 
-/* ===============SERVICES=============== */
+/* =============== SERVICES =============== */
 .cards.grid {
   gap: 1.5rem;
 }
@@ -371,4 +371,93 @@ nav.show div.icon-close {
 .card title {
   font-size: 1.5rem;
   margin-bottom: 0.75rem;
+}
+
+/* =============== TESTIMONIALS =============== */
+#testimonials {
+  background: white;
+}
+
+#testimonials .container {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+#testimonials header {
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+  margin-bottom: 0;
+}
+
+#testimonials blockquote {
+  padding: 2rem;
+  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.08);
+  border-radius: 0.25rem;
+}
+
+#testimonials blockquote p {
+  position: relative;
+  text-indent: 1.875rem;
+  margin-bottom: 1.5rem;
+  color: var(--title-color);
+}
+
+#testimonials blockquote p span {
+  font: 700 2.5rem 'Georgia', serif;
+  position: absolute;
+  top: -0.37rem;
+  left: -1.875rem;
+  color: var(--base-color);
+}
+
+#testimonials cite {
+  display: flex;
+  align-items: center;
+  font-style: normal; /* para tirar o itálico do <cite> */
+}
+
+#testimonials cite img {
+  width: 2rem;
+  height: 2rem;
+  object-fit: cover; /* encaixar cobrindo todo o espaço da div */
+  clip-path: circle();
+  margin-right: 0.5rem;
+}
+
+/* swiper */
+.swiper-slide {
+  height: auto;
+  padding: 4rem 1rem;
+}
+
+.swiper-pagination-bullet-active {
+  background: var(--base-color);
+}
+
+/* =============== CONTACT =============== */
+#contact .grid {
+  gap: 4rem;
+}
+
+#contact .text p {
+  margin-bottom: 2rem;
+}
+
+#contact .button i,
+#contact ul li i {
+  font-size: 1.5rem;
+  margin-right: 0.625rem;
+}
+
+#contact ul.grid {
+  gap: 2rem;
+}
+
+#contact ul li {
+  display: flex;
+  align-items: center;
+}
+
+#contact ul li i {
+  color: var(--base-color);
 }

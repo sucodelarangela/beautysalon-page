@@ -34,3 +34,33 @@ window.addEventListener('scroll', function () {
     header.classList.remove('scroll')
   }
 })
+
+// Function: Swiper for the testimonials
+const swiper = new Swiper('.swiper', {
+  slidesPerView: 1,
+  pagination: {
+    el: '.swiper-pagination'
+  },
+  mousewheel: true,
+  keyboard: true
+})
+
+//Function: Scroll reveal smoothly scrolls and reveals the content in the page using the function below
+const scrollReveal = ScrollReveal({
+  origin: 'top', //vai vir do topo
+  distance: '30px', //de uma distância de 30px
+  duration: 700, //por 700ms
+  reset: true //e reseta ao voltar a página
+})
+
+//constante, revele os seguintes `itens` num {intervalo de 100ms}:
+scrollReveal.reveal(
+  `
+#home .image, #home .text,
+#about .image, #about .text,
+#services header, #services .card,
+#testimonials header, #testimonials .testimonials,
+#contact .text, #contact .links
+`,
+  {interval: 100}
+)
