@@ -24,15 +24,30 @@ for (const link of links) {
 }
 
 // Function: change header class when scrolling
+// Function: show back-to-top button when scrolling
 const header = document.querySelector('#header')
 const navHeight = header.offsetHeight
+const backToTopButton = document.querySelector('.back-to-top')
 
-window.addEventListener('scroll', function () {
+function changeHeaderOnScroll() {
   if (window.scrollY >= navHeight) {
     header.classList.add('scroll')
   } else {
     header.classList.remove('scroll')
   }
+}
+
+function backToTop() {
+  if (window.scrollY >= 560) {
+    backToTopButton.classList.add('show')
+  } else {
+    backToTopButton.classList.remove('show')
+  }
+}
+
+window.addEventListener('scroll', function () {
+  changeHeaderOnScroll()
+  backToTop()
 })
 
 // Function: Swiper for the testimonials
@@ -61,6 +76,7 @@ scrollReveal.reveal(
 #services header, #services .card,
 #testimonials header, #testimonials .testimonials,
 #contact .text, #contact .links
+footer .brand, footer .social
 `,
   {interval: 100}
 )
