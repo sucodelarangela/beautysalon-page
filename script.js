@@ -25,9 +25,11 @@ for (const link of links) {
 
 // Function: change header class when scrolling
 // Function: show back-to-top button when scrolling
+// Function: keep menu section active according to visible section
 const header = document.querySelector('#header')
 const navHeight = header.offsetHeight
 const backToTopButton = document.querySelector('.back-to-top')
+const sections = document.querySelectorAll('main section[id]') //all sections inside main with an id
 
 function changeHeaderOnScroll() {
   if (window.scrollY >= navHeight) {
@@ -45,9 +47,36 @@ function backToTop() {
   }
 }
 
+function activateMenuAtCurrentSection() {
+  const checkpoint = window.pageYOffset + (window.innerHeight / 8) * 4
+  // numbers 8 and 4 reached by test and error. This is a general checkpoint for the page
+
+  // for every section of the constant sections above
+  for (const section of sections) {
+    const sectionTop = section.offsetTop //gets coordinate of its top
+    const sectionHeight = section.offsetHeight //gets its total height
+    const sectionId = section.getAttribute('id') //gets its attribute (id)
+    const checkpointStart = checkpoint >= sectionTop
+    const checkpointEnd = checkpoint <= sectionTop + sectionHeight
+
+    //if it's between the start and the end checkpoint...
+    if (checkpointStart && checkpointEnd) {
+      //...the document gets the 'anchor with the [href=#nameOfSectionId]' and adds a class '.active'
+      document
+        .querySelector('nav ul li a[href*=' + sectionId + ']')
+        .classList.add('active')
+    } else {
+      document
+        .querySelector('nav ul li a[href*=' + sectionId + ']')
+        .classList.remove('active')
+    }
+  }
+}
+
 window.addEventListener('scroll', function () {
   changeHeaderOnScroll()
   backToTop()
+  activateMenuAtCurrentSection()
 })
 
 // Function: Swiper for the testimonials
@@ -56,8 +85,16 @@ const swiper = new Swiper('.swiper', {
   pagination: {
     el: '.swiper-pagination'
   },
-  mousewheel: true,
-  keyboard: true
+  mousewheel: true, // controls with
+  keyboard: true, // controls with
+
+  // it's possible to add breakpoints for responsiveness
+  breakpoints: {
+    767: {
+      slidesPerView: 2,
+      setWrapperSize: true
+    }
+  }
 })
 
 //Function: Scroll reveal smoothly scrolls and reveals the content in the page using the function below
@@ -68,7 +105,7 @@ const scrollReveal = ScrollReveal({
   reset: true //e reseta ao voltar a página
 })
 
-//constante, revele os seguintes `itens` num {intervalo de 100ms}:
+//constant, show the following `items` in an {interval of 100ms}:
 scrollReveal.reveal(
   `
 #home .image, #home .text,
