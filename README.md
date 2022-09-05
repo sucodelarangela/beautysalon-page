@@ -1,33 +1,53 @@
-Page developed during the event NLW Together from Rocketseat. Amongst several different learning trails, this content was part of the Origin trail which is focused on teaching the basics of Front-End Development with HTML, CSS and JavaScript.
+<div id='top'>
 
-Click [here](https://www.figma.com/community/file/1009807319507822993) to view the original Figma design.
+# Beauty Salon | NLW Together Rocketseat
 
-![](preview.png)
+</div>
 
-Below there are some tips on some tools used during the classes:
+_[Read it in English](#English)_
 
-## General sites and stuff
+Neste repositório você encontra a página do **Beauty Salon**, um salão de beleza fictício especializado em tratamentos narurais.
 
-- General free royalty images:
+Este projeto foi desenvolvido durante o evento **#NLWtogether** promovido pela [Rocketseat](https://www.rocketseat.com.br) sob a orientação de [Mayk Brito](https://github.com/maykbrito). Dentre as várias trilhas disponibilizadas, o conteúdo da Trilha Origin foi focado na prática do básico de HTML, CSS e JavaScript.
 
-  - [Unsplash](https://unsplash.com/)
-  - [Getty Images](https://www.gettyimages.com.br/)
-  - [Random User Generator](https://randomuser.me/)
+Também foram utilizadas as bibliotecas [SwiperJS](https://swiperjs.com/) (para o carrossel) e [Scroll Reveal JS](https://scrollrevealjs.org/) (para o efeito suave de rolagem e transição das seções da página). Os ícones utilizados em formato de fontes foram gerados a partir do site [iconmoon app](https://icomoon.io/app).
 
-- [SwiperJS](https://swiperjs.com/): Library used for creating carousels in a page
+<!-- prettier-ignore -->
+| 🪧 Vitrine Dev |     |
+| ------------- | --- |
+| ✨ Nome        | **Beauty Salon** - Rocketseat |
+| 🏷️ Tecnologias | HTML, CSS, JavaScript, Swiper, Scroll Reveal |
+| 🚀 URL         | [https://sucodelarangela.github.io/beautysalon-page/](https://sucodelarangela.github.io/beautysalon-page/) |
+| 🔥 Desafio      | [Protótipo do Figma](https://www.figma.com/community/file/1009807319507822993) |
 
-- [Scroll Reveal JS](https://scrollrevealjs.org/): Library used for smoothly scroll and review content in your page
+![](https://raw.githubusercontent.com/sucodelarangela/beautysalon-page/master/preview.png#vitrinedev)
 
-- Whatsapp API
-  - If you have a button or anchor to a whatsapp contact number, you should add the following line to your href: `https://api.whatsapp.com/send?phone=YourNumber&text=YourMessage`
+<div>
+  <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white">
+  <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white">
+  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black">
+  <a href="https://swiperjs.com"><img src="https://img.shields.io/badge/Swiper-6332F6?style=for-the-badge&logo=swiper&logoColor=white" /></a>
+  <a href="https://scrollrevealjs.org"><img src="https://img.shields.io/badge/ScrollReveal-FFCB36?style=for-the-badge&logo=scrollreveal&logoColor=black"></a>
+</div>
 
-## IconMoon App
+---
 
-By using the [iconmoon app](https://icomoon.io/app) it's possible to create an icon pack by transforming your svg icons into fonts.
+<div id="English">
 
-1. Go to [iconmoon app website](https://icomoon.io/app);
-2. Click on 'Import Icons' to upload your svg files;
-3. Select the icons you want to edit and click the pencil button on the toolbar
-4. A window will open. Here you can edit your icons, for instance, removing the color and adding a grid size;
-5. After editing as you please, click the 'Generate Font' button;
-6. The app will transform your icons in fonts which can be linked to your HTML file as a CSS file. Also, it will allow you to stylize your icons as fonts, by using font-size, color and other CSS font propoerties.
+_English version_
+
+</div>
+
+## 🔎 Overview
+
+In this repository you will find the home page of a pseudo **Beauty Salon**, specialized in natural treatments.
+
+This project was developed during the event **#NLWtogether** hosted by [Rocketseat](https://www.rocketseat.com.br) with the help of the instructor [Mayk Brito](https://github.com/maykbrito). Amongst several different trails available, the Origin Trail focused on practicing the basics of HTML, CSS and JavaScript.
+
+The following library and tools were also used in the development of this page: [SwiperJS](https://swiperjs.com/) (for the carousel), [Scroll Reveal JS](https://scrollrevealjs.org/) (for the smooth scrolling and section transition effects), and [iconmoon app](https://icomoon.io/app) for generating icons as fonts.
+
+<a href='#top'>🔼 Back to top</a>
+
+---
+
+Developed with 🧡 by [@sucodelarangela](https://angelacaldas.vercel.app)
